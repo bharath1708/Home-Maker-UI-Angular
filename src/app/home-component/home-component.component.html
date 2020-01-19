@@ -1,0 +1,20 @@
+
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">home_work</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>{{constant.APP_NAME}}</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon cursor-pointer" aria-hidden="false" aria-label="Example user verified icon" (click)="sidenav.toggle()">note_add</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+  </mat-toolbar-row>   
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <app-add-expense-component></app-add-expense-component>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+<app-dashboard-component></app-dashboard-component>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

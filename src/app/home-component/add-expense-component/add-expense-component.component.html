@@ -1,0 +1,35 @@
+  <div class="example-container">
+    <mat-card-header>
+      <button mat-fab>
+        <mat-icon>event_note</mat-icon>
+      </button>
+      <mat-card-title>My Expense....</mat-card-title>
+      <mat-card-subtitle>Kindly Note it.....</mat-card-subtitle>
+      </mat-card-header>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="Food">Food</mat-radio-button>
+      <mat-radio-button value="Transport">Transport</mat-radio-button>
+      <mat-radio-button value="Medical">Medical</mat-radio-button>
+      <mat-radio-button value="Clothes">Clothes</mat-radio-button><br/>
+      <mat-radio-button value="Cosmetics">Cosmetics</mat-radio-button>
+      <mat-radio-button value="Fee">Fee</mat-radio-button>
+      <mat-radio-button value="Dues">Dues</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field  appearance="outline">
+      <mat-label>Expense Category</mat-label>
+      <input matInput placeholder="Expense Category">
+      <mat-icon matSuffix>category</mat-icon>
+    </mat-form-field>
+    <mat-form-field  appearance="outline">
+      <mat-label>Expense Date</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    <mat-form-field  appearance="outline">
+      <mat-label>Expense Amount</mat-label>
+      <input matInput type="number" class="example-right-align">
+      <mat-icon matSuffix>attach_money</mat-icon>
+    </mat-form-field>
+  </div>
+  
